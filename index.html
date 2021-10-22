@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- Juan Manuel Toscano Reyes -->
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Validaciones</title>
+  </head>
+  <body>
+    <form name="validaciones" action="#" method="POST">
+            Nombre: <input type="text" name="nombre" /><br />
+            Apellidos: <input type="text" name="apellidos" /><br />
+            Email: <input type="text" name="email" /><br />
+            NIF: <input type="text" name="nif" /><br />
+            Teléfono: <input type="text" name="telefono" /><br /><br />
+            Comunidad: <select id="comunidad" name="comunidad">
+              <option value="1">Andalucía</option>
+              <option value="2">Aragón</option>
+              <option value="3">Asturias</option>
+              <option value="4">Islas Baleares</option>
+              <option value="5">Canarias</option>
+              <option value="6">Castilla y León</option>
+              <option value="7">Castilla La Mancha</option>
+              <option value="8">Catalunya</option>
+              <option value="9">Comunidad Valenciana</option>
+              <option value="10">Extremadura</option>
+            </select>
+            <p>Acepta la política de Privacidad <input type="checkbox" name="checkbox" /></p>
+            <p>¿Le gusta el Brocoli?</p>
+            <label for="rSi">Sí</label><input type="radio" id="si" value="si" />
+            <label for="rNo">No</label><input type="radio" id="no" value="no" />
+            <input type="submit" value="Enviar" name="enviar" />
+      </form>
+  </body>
+</html>
