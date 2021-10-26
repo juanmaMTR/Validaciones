@@ -25,6 +25,7 @@ function validar(evento){
     if(document.getElementById('nombre').length <2){
         return false
     }
+    //if(document.getElementById('apellidos'))
 
     //evento.preventDefault()
     //return false
