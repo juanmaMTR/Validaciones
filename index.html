@@ -3,14 +3,16 @@
 <html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/validaciones.css">
     <title>Validaciones</title>
   </head>
   <body>
     <form name="validaciones" action="#" method="POST">
             Nombre: <input type="text" name="nombre" /><br />
             Apellidos: <input type="text" name="apellidos" /><br />
+            Edad: <input type="number" name="edad" placeholder="¿Cuántos años tienes?" min="0"/><br />
             Email: <input type="text" name="email" /><br />
-            NIF: <input type="text" name="nif" /><br />
+            NIF: <input type="text" name="nif"  pattern="[0-9]{8}[A-Z]"/><br />
             Teléfono: <input type="text" name="telefono" /><br /><br />
             Comunidad: <select id="comunidad" name="comunidad">
               <option value="1">Andalucía</option>
@@ -24,11 +26,12 @@
               <option value="9">Comunidad Valenciana</option>
               <option value="10">Extremadura</option>
             </select>
-            <p>Acepta la política de Privacidad <input type="checkbox" name="checkbox" /></p>
+            <p>Acepta la política de Privacidad <input type="checkbox" name="politica" id="politica" /></p>
             <p>¿Le gusta el Brocoli?</p>
             <label for="rSi">Sí</label><input type="radio" id="si" value="si" />
             <label for="rNo">No</label><input type="radio" id="no" value="no" />
             <input type="submit" value="Enviar" name="enviar" />
       </form>
+      <script src="js/validaciones.js"></script>
   </body>
 </html>
