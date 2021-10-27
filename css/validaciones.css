@@ -2,7 +2,7 @@
     box-sizing: border-box;
   }
   
-input[type=text], select, textarea, input[type=number]{
+input[type=text], select, textarea, input[type=number],input[type=email]{
 width: 100%;
 padding: 12px;
 border: 1px solid #ccc;

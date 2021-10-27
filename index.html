@@ -8,12 +8,12 @@
   </head>
   <body>
     <form name="validaciones" action="#" method="POST">
-            Nombre: <input type="text" name="nombre" pattern=".{3,}"/><br />
-            Apellidos: <input type="text" name="apellidos" id="apellidos"/><br />
-            Edad: <input type="number" name="edad" placeholder="¿Cuántos años tienes?" min="0"/><br />
-            Email: <input type="text" name="email" /><br />
-            NIF: <input type="text" name="nif"  pattern="[0-9]{8}[A-Z]"/><br />
-            Teléfono: <input type="text" name="telefono" /><br /><br />
+            Nombre: <input type="text" name="nombre" pattern=".{3,}" /><br />
+            Apellidos: <input type="text" name="apellidos" id="apellidos" /><br />
+            Edad: <input type="number" name="edad" placeholder="¿Cuántos años tienes?" min="18" /><br />
+            Email: <input type="email" name="email" /><br />
+            NIF: <input type="text" name="nif" id="nif" /><br />
+            Teléfono: <input type="text" name="telefono" pattern="[0-9]{9}" /><br /><br />
             Comunidad: <select id="comunidad" name="comunidad">
               <option value="1">Andalucía</option>
               <option value="2">Aragón</option>
