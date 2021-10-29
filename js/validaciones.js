@@ -34,21 +34,13 @@ function validar(evento){
         document.getElementById('apellidos').style.border= '2px dashed red'
         return false
     }
-    //Validamos el dni o nif
-    //https://donnierock.com/2011/11/05/validar-un-dni-con-javascript/
-    let numero=null
-    let letr=null
-    let letra='TRWAGMYFPDXBNJZSQVHLCKET'
     
 
     //Validad brocoli y asturiano
-    if(document.getElementById('rSi').checked && document.getElementById('comunidad')==3){
+    if(document.getElementById('si').checked && document.getElementById('comunidad')==3){
         document.getElementById('comunidad').style.border='2px dashed red'
         return false
     }
-
-    //evento.preventDefault()
-    //return false
 }
 //Función para elegir las provincias que vas a añadir
 function elegirProvincia(){
@@ -88,7 +80,7 @@ function visualizarMensaje(mensaje, posicion){
     let texto=document.createTextNode('* '+mensaje)
 
     p.appendChild(texto)
-    p.classList.add('mensajeerror')
+   // p.classList.add('mensajeerror')
 
-    document.getElementsByClassName(`${posicion}`)[0].appendChild(p)
+    document.getElementsByClassName(`${posicion}`).appendChild(p)
 }
