@@ -10,7 +10,7 @@
     <form name="validaciones" action="#" method="POST">
             Nombre: <input type="text" name="nombre" pattern=".{3,}" /><br />
             Apellidos: <input type="text" name="apellidos" id="apellidos" /><br />
-            Edad: <input type="number" name="edad" placeholder="¿Cuántos años tienes?" min="18" /><br />
+            Edad: <input type="number" name="edad" placeholder="¿Cuántos años tienes?" min="18" max="100"/><br />
             Email: <input type="email" name="email" /><br />
             NIF: <input type="text" name="nif" id="nif" /><br />
             Teléfono: <input type="text" name="telefono" pattern="[0-9]{9}" /><br /><br />
@@ -26,6 +26,7 @@
               <option value="9">Comunidad Valenciana</option>
               <option value="10">Extremadura</option>
             </select>
+            <div class="select"></div>
             <p>Acepta la política de Privacidad <input type="checkbox" name="politica" id="politica" /></p>
             <p>¿Le gusta el Brocoli?</p>
             <label for="rSi">Sí</label><input type="radio" id="si" value="si" />

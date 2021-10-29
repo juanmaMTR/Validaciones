@@ -22,6 +22,7 @@ function iniciar(){
 //Función para validar el formulario
 function validar(evento){
     console.log('Estoy validando');
+    
     //Comprobamos que el checkbox de la politica está marcado
     if(!document.getElementById('politica').checked){
         alert('La politica de privacidad no está señalada')
@@ -34,10 +35,13 @@ function validar(evento){
         return false
     }
     //Validamos el dni o nif
-    let validaciondni=/(^([0-9]{8,8}\-[A-Z])|^)$/
-    if(!(validaciondni.test(formulario.nif.value))){
-        document.getElementById('nif').style.border= '2px dashed red'
-        return false
+    //https://donnierock.com/2011/11/05/validar-un-dni-con-javascript/
+    let validaciondni= /^\d{8}[a-zA-Z]$/
+    let numero=null
+    let letr=null
+    let letra='TRWAGMYFPDXBNJZSQVHLCKET'
+    if(validaciondni.test(formulario.nif.value)== true){
+
     }
 
     //evento.preventDefault()
@@ -51,24 +55,23 @@ function elegirProvincia(){
         let select=document.createElement('select')
         select.id='provincia'
         select.name='provincia'
+
+        let div=document.getElementsByClassName('select')[0]
+        div.appendChild(select)
+        
         
         //Array de las Provincias
         let provincias=["Cáceres","Badajoz"]
         //Ordeno array alfabéticamente
         provincias.sort()
-        //Pasamos el array y el select a otra funcion
-        addOptions("provincia", provincias)
 
+        //Recorremos el array
+        for(let provincia in provincias){
+            let opcion=document.createElement('option')
+            opcion.text=provincias[provincia]
+            select.appendChild(opcion)
+        }
+        
 
-    }
-}
-//Funcion que agrega las provincias al select
-function addOptions(domElement, provincias){
-    let selector=document.getElementsByName(domElement)[0]
-    //Recorremos el array
-    for(provincia in provincias){
-        let opcion=document.createElement('option')
-        opcion.text=provincias[provincia]
-        selector.add(opcion)
     }
 }
