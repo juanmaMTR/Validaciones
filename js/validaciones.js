@@ -25,7 +25,7 @@ function validar(evento){
     
     //Comprobamos que el checkbox de la politica está marcado
     if(!document.getElementById('politica').checked){
-        alert('La politica de privacidad no está señalada')
+        visualizarMensaje('La politica de privacidad no está señalada',7)
         return false
     }
     //Comprobamos que en el apartado de apellidos hay dos palabras
@@ -40,6 +40,12 @@ function validar(evento){
     let letr=null
     let letra='TRWAGMYFPDXBNJZSQVHLCKET'
     
+
+    //Validad brocoli y asturiano
+    if(document.getElementById('rSi').checked && document.getElementById('comunidad')==3){
+        document.getElementById('comunidad').style.border='2px dashed red'
+        return false
+    }
 
     //evento.preventDefault()
     //return false
@@ -70,5 +76,19 @@ function elegirProvincia(){
         }
         
 
+    }else{
+        if(document.getElementById('provincia')){
+            document.getElementById('provincia').remove()
+        }
     }
+}
+
+function visualizarMensaje(mensaje, posicion){
+    let p=document.createElement('p')
+    let texto=document.createTextNode('* '+mensaje)
+
+    p.appendChild(texto)
+    p.classList.add('mensajeerror')
+
+    document.getElementsByClassName(`${posicion}`)[0].appendChild(p)
 }

@@ -9,11 +9,17 @@
   <body>
     <form name="validaciones" action="#" method="POST">
             Nombre: <input type="text" name="nombre" pattern=".{3,}" required /><br />
+            <div class="1"></div>
             Apellidos: <input type="text" name="apellidos" id="apellidos" required /><br />
+            <div class="2"></div>
             Edad: <input type="number" name="edad" placeholder="¿Cuántos años tienes?" min="18" max="100" required /><br />
+            <div class="3"></div>
             Email: <input type="email" name="email" required /><br />
+            <div class="4"></div>
             NIF: <input type="text" name="nif" id="nif" pattern="\d{8}[a-zA-Z]" required /><br />
+            <div class="5"></div>
             Teléfono: <input type="text" name="telefono" pattern="[0-9]{9}" required /><br /><br />
+            <div class="6"></div>
             Comunidad: <select id="comunidad" name="comunidad">
               <option value="1">Andalucía</option>
               <option value="2">Aragón</option>
@@ -28,9 +34,11 @@
             </select>
             <div class="select"></div>
             <p>Acepta la política de Privacidad <input type="checkbox" name="politica" id="politica" required /></p>
+            <div class="7"></div>
             <p>¿Le gusta el Brocoli?</p>
             <label for="rSi">Sí</label><input type="radio" id="si" value="si" required />
             <label for="rNo">No</label><input type="radio" id="no" value="no" required />
+            <div class="8"></div>
             <input type="submit" value="Enviar" name="enviar" />
       </form>
       <script src="js/validaciones.js"></script>
