@@ -29,20 +29,17 @@ function validar(evento){
         return false
     }
     //Comprobamos que en el apartado de apellidos hay dos palabras
-    let palabrasapellidos=document.getElementById('apellidos').value.split(' ')
+    let palabrasapellidos=document.getElementById('apellidos').value.trim().split(' ')
     if(palabrasapellidos.length<2){
         document.getElementById('apellidos').style.border= '2px dashed red'
         return false
     }
     //Validamos el dni o nif
     //https://donnierock.com/2011/11/05/validar-un-dni-con-javascript/
-    let validaciondni= /^\d{8}[a-zA-Z]$/
     let numero=null
     let letr=null
     let letra='TRWAGMYFPDXBNJZSQVHLCKET'
-    if(validaciondni.test(formulario.nif.value)== true){
-
-    }
+    
 
     //evento.preventDefault()
     //return false
